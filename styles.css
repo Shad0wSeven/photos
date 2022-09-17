@@ -8,8 +8,10 @@ body {
     letter-spacing: 5px;
     font-size: 12px;
     padding: none;
-    margin: 20px;
-    padding-top: 60px;
+    margin: none;
+    /* margin: 20px; */
+    /* padding-top: 60px; */
+    background-color: black;
     
 
 }
@@ -51,6 +53,12 @@ a:hover::after {
     top: 0;
     position: fixed;
     margin-top: 5px;
+    background-color: black;
+    color: white;
+}
+
+#top a {
+    color: inherit;
 }
 
 #heading {
@@ -87,7 +95,9 @@ ul {
 /* Photobox */
 
 #photobox {
-    max-width: calc(100vw - 320px);
+    max-width: calc(100vw - 280px);
+    margin-left: -20px;
+    margin-top: -8px;
     
 }
 
@@ -99,7 +109,7 @@ ul {
     position: fixed;
     z-index: 99;
     width: 250px;
-    top: 36px;
+    top: 0;
     right: 0;
     height: 100vh;
     background-color: white;
@@ -132,4 +142,5 @@ ul {
     z-index: -99;
     position: fixed;
     bottom: 10px;
+    color: white;
 }
