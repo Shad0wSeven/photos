@@ -41,8 +41,13 @@ a:hover {
 
 }
 
+a:after {
+    text-decoration: none;
+}
+
 a:hover::after {
     content: "→";
+    text-decoration: none;
     /* padding-left: 3px; */
     /* font-size: 20px; */
 }
