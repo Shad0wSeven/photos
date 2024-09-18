@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>photos</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/styles.css'>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>photos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="/styles.css"
+        />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-    var folder = "imgs/";
-        $.ajax({
-            url : folder,
-            success: function (data) {
-                $(data).find("a").attr("href", function (i, val) {
-                    if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                        $("#photobox").append( "<img src='"+ val +"'>" );
-                    } 
-                });
-            }
-        });</script>
-</head>
-<body>
-    <!-- <div id="heading">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            var folder = "webp_imgs/";
+            $.ajax({
+                url: folder,
+                success: function (data) {
+                    $(data)
+                        .find("a")
+                        .attr("href", function (i, val) {
+                            if (val.match(/\.(webp)$/)) {
+                                $("#photobox").append(
+                                    "<img src='" + val + "'>"
+                                );
+                            }
+                        });
+                },
+            });
+        </script>
+    </head>
+    <body>
+        <!-- <div id="heading">
         <ul>
             <li style="padding-right: 70px;">A COOL PROJECT.</li>
 
@@ -30,31 +40,33 @@
           </ul>
 
     </div> -->
-    
-    <p id="top"><a href="https://ayushnayak.me">PHOTOS.AYUSHNAYAK.ME</a></p>
-    <div id="photobox">
-        <!-- <p>⚠ raws have actual picture files make sure to download from /raws/ not "view image"</p> -->
-    </div>
-    <div id="next">
-        <p>ABOUT</p>
-        this is a collection of photos taken in 2022, by Ayush Nayak and Vignesh Nydhruva 
-        <p>RAWS</p>
-        raws can be found at <a href="https://github.com/Shad0wSeven/rawphotos"><u>rawphotos</u></a>
-        <p>EQUIPMENT</p>
-        <a href="https://www.bhphotovideo.com/c/product/753762-REG/Canon_5169B003_EOS_Rebel_T3i_Digital.html"><u>CANON: Rebel T3i (2011)</u></a><br>
-        - kit 18-55mm<br>
-        - telephoto 55-250<br>
-        <br>
-        <u>Nikon: D40 (2006)</u><br>
-        - kit 18-55
-        
-        <p>credits</p>
-        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;width: 100px;" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><u>Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</u></a>
-        <p id="time">last update</p>
-        10/28/2022<br>21:00:25
-        
-    </div>
-    <div style="height: 20px;"></div>
-    <div id="footer">CREATED BY AYUSH NAYAK AND VIGNESH NYDHRUVA IN 2022</div>
-</body>
+        <div id="home"><a href="https://shad0w.vercel.app">< go home</a></div>
+
+        <div id="top">
+            <div id="text">
+                <h1>ayush's photos</h1>
+                <br />
+                a collection of photos i've taken from 2020 to 2024, alongside
+                vignesh. mostly of sd, sf, and random places along the way.
+                <br />
+                <br />
+                photos on either a
+                <a href="https://en.wikipedia.org/wiki/Canon_EOS_Rebel_T3i"
+                    >eos t3i</a
+                >,
+                <a href="https://en.wikipedia.org/wiki/Nikon_D40">nikon d40</a>,
+                or mostly (and the recent ones) my
+                <a href="https://fujifilm-x.com/global/products/cameras/x-h1/"
+                    >fujifilm xh-1</a
+                >.
+            </div>
+            <p id="scroll-down">scroll down</p>
+        </div>
+        <div id="photobox">
+            <!-- <p>⚠ raws have actual picture files make sure to download from /raws/ not "view image"</p> -->
+        </div>
+        <footer>
+            <p>copyright 2024 ayush nayak. all rights reserved.</p>
+        </footer>
+    </body>
 </html>
