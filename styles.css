@@ -8,6 +8,7 @@ body {
     margin: none;
     background-color: black;
     color: white;
+    -webkit-font-smoothing: antialiased;
 }
 
 img {
